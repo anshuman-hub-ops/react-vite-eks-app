@@ -1,120 +1,68 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
       <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
         <div>
-          <h1>Get started</h1>
+          <h1>🚀 React Vite CI/CD on Amazon EKS</h1>
+
           <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
+            This application is successfully deployed using a complete
+            CI/CD Pipeline.
           </p>
+
+          <h3>Project Technologies</h3>
+
+          <ul style={{ textAlign: 'left', display: 'inline-block' }}>
+            <li>⚛ React + Vite</li>
+            <li>🐳 Docker</li>
+            <li>☁ Amazon ECR</li>
+            <li>☸ Amazon EKS</li>
+            <li>🔧 Jenkins Pipeline</li>
+            <li>📂 GitHub Repository</li>
+          </ul>
+
+          <br /><br />
+
+          <button className="counter">
+            ✅ Deployment Successful
+          </button>
         </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
       </section>
 
       <div className="ticks"></div>
 
       <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
+        <h2>CI/CD Pipeline Flow</h2>
+
+        <p>
+          GitHub → Jenkins → Docker → Amazon ECR → Amazon EKS
+        </p>
+
+        <br />
+
+        <h3>Pipeline Status</h3>
+
+        <p>✔ Source Code Checked Out</p>
+        <p>✔ React Application Built</p>
+        <p>✔ Docker Image Created</p>
+        <p>✔ Docker Image Pushed to Amazon ECR</p>
+        <p>✔ Kubernetes Deployment Updated</p>
+        <p>✔ Application Successfully Running on Amazon EKS</p>
       </section>
 
       <div className="ticks"></div>
-      <section id="spacer"></section>
+
+      <section id="spacer">
+        <h3>Developed by</h3>
+
+        <p><strong>Anshuman Ayush Baral</strong></p>
+
+        <p>B.Tech Computer Science & Engineering</p>
+
+        <p>React • Docker • Jenkins • AWS EKS • Kubernetes</p>
+      </section>
     </>
   )
 }
